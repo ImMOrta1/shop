@@ -1,0 +1,8 @@
+{
+  "name": "my-first-project",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "jade": "^1.11.0"
+  }
+}
