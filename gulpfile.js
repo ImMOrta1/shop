@@ -14,7 +14,7 @@ var
 		jade : {
 			location    : 'app/templates/**/*.jade',
 			compiled    : 'app/templates/_pages/*.jade',
-			destination : '.'
+			destination : 'app/'
 		},
 
 		scss : {

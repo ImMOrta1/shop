@@ -1,1 +1,10 @@
-.test {}
+@import "compass";
+
+/* --------- global styles --------- */
+@import "_misc/_global";
+
+/* --------- sections --------- */
+@import "sections/_header";
+
+/* --------- fonts --------- */
+@import "_misc/_fonts.scss"

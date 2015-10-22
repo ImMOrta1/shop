@@ -1,0 +1,52 @@
+/* --------- header --------- */
+.header-top {
+	height: 78px;
+	background: #fff;
+	margin-bottom: 20px;
+	border-bottom: $greyBorder;
+}
+
+.top-socials {
+	float: left;
+	padding-top: 20px;
+
+	.top-socials__list {
+
+		.top-socials__item {
+			display: inline-block;
+			text-indent: 1px;
+			margin-left: 15px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			.top-socials__link {
+				display: block;
+				width: 26px;
+				height: 26px;
+				
+			}
+		}
+	}
+}
+
+$socials: fb, vk, tw;
+@each $social in $socials {
+	.socials__link_#{$social} {
+		background: url('../img/top-socials/#{$social}.png') 0 0 no-repeat;
+	}
+}
+
+.contacts {
+	float: right;
+	padding-top: 20px;
+
+	.contacts__list {
+		
+		.contacts__item {
+			display: inline-block;
+
+		}
+	}
+}

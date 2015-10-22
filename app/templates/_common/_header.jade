@@ -1,0 +1,18 @@
+header.header
+	.header-top
+		.container
+			.top-socials
+				ul.top-socials__list
+					- var socials = ['fb', 'vk', 'tw']
+					each social in socials
+						li.top-socials__item
+							a(href="#" class="top-socials__link top-socials__link_" + social)= social
+			adress.contacts
+				ul.contacts__list
+					li.contacts__item ул. Маяковская 6, офис 17
+					li.contacts__item +7 (921) 123-12-13
+
+	.header-bottom
+		.container
+			.logo
+			form.search
