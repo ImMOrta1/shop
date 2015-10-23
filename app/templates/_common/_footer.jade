@@ -1,0 +1,16 @@
+include _mixins
+footer.footer
+	.container
+		.footer-content.clearfix
+			.footer-logo
+				a(href="#")
+					img(src="img/footer-logo.png" alt="логотипа сверху явно не хватило дизайнеру" class="footer-logo__img")
+			.footer-socials
+					ul.footer-socials__list
+						- var socials = ['fb', 'vk', 'tw']
+						each social in socials
+							li.footer-socials__item
+								a(href="#" class="footer-socials__link footer-socials__link_" + social)= social
+		.footer-links
+			+nav('footer-menu', ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'])
+	.copyright All rights reserved. 2015. no copy alowed

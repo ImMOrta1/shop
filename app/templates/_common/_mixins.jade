@@ -1,6 +1,6 @@
 mixin nav(className, items, active)
 	nav(class= className)
 		ul(class= className + "__list")
-			each item, inActive in items
-				li(class= className + "__item" + ((active == inActive) ? className + '__item' + 'active' : ''))
-					a(href="#" class= className + "__link")= item
+			each item,inActive in items
+				li(class= className + "__item")
+					a(href="#" class= className + "__link" + ((active == inActive) ? ' ' + className + '__link' + '_active' : ''))= item

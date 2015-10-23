@@ -8,26 +8,33 @@ html(lang="ru-RU")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+		link(rel="stylesheet" type='text/css' href="/bower/modernizr/modernizr.js")
+		link(rel="stylesheet" type='text/css' href="/bower/normalize-css/normalize.css")
 		link(rel="stylesheet" type='text/css' href="/css/main.css")
-		title block 
+		title
+			block title
 	body
 		.wrapper
 			// header
 			include _common/_header
-				+nav('top-menu', ['Карта проезда', 'История заказов', 'Корзина'])
 			// main-menu
 			include _common/_main-menu
 			// site-path
-			include _common/_site-path
+			.container
+				.page-path
+					.page-links
+						block page-links
+					block page-title
 			.main-content
-				.top-content
-					// side-bar
+				.container
+					// sidebar
 					include _common/_sidebar
 					// content
 					include _common/_content
-				// bottom-content
-				include _common/_bottom-content
-			//footer
-			include _common/_footer
+				.container
+					// bottom-content
+					include _common/_bottom-content
+		//footer
+		include _common/_footer
 
 		script('/js/main.js')

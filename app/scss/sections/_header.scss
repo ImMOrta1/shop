@@ -1,52 +1,133 @@
 /* --------- header --------- */
+/* --------- top-header --------- */
 .header-top {
 	height: 78px;
 	background: #fff;
-	margin-bottom: 20px;
-	border-bottom: $greyBorder;
+	margin-bottom: 28px;
+	border-bottom: $greyBb;
 }
 
 .top-socials {
 	float: left;
-	padding-top: 20px;
-
-	.top-socials__list {
-
-		.top-socials__item {
-			display: inline-block;
-			text-indent: 1px;
-			margin-left: 15px;
-
-			&:first-child {
-				margin-left: 0;
-			}
-
-			.top-socials__link {
-				display: block;
-				width: 26px;
-				height: 26px;
-				
-			}
-		}
-	}
+	padding-top: 25px;
 }
+
+.top-socials__item {
+	display: inline-block;
+	text-indent: -9999px;
+	margin-left: 12px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}		
+
+.top-socials__link {
+	display: block;
+	width: 26px;
+	height: 26px;		
+}
+
 
 $socials: fb, vk, tw;
 @each $social in $socials {
-	.socials__link_#{$social} {
+	.top-socials__link_#{$social} {
 		background: url('../img/top-socials/#{$social}.png') 0 0 no-repeat;
+	}
+	.top-socials__link_#{$social}:hover {
+		background: url('../img/top-socials/#{$social}-hover.png') 0 0 no-repeat;
 	}
 }
 
 .contacts {
 	float: right;
-	padding-top: 20px;
+	padding-top: 26px;
+}
 
-	.contacts__list {
-		
-		.contacts__item {
-			display: inline-block;
+.contacts__item {
+	display: inline-block;
+	margin-left: 80px;
 
-		}
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.contacts__item_adress {
+	padding-left: 25px;
+	line-height: 20px;
+}
+
+.contacts__item_phone {
+	@extend .contacts__item_adress;
+	font-family: $sami;
+	font-size: 18px;
+}
+
+$contacts: adress, phone;
+@each $contact in $contacts {
+	.contacts__item_#{$contact} {
+		background: url('../img/contacts/#{$contact}.png') 0 0 no-repeat;
+	}
+}
+
+/* --------- bottom-header --------- */
+.header-bottom {
+	margin-bottom: 27px;
+}
+
+.logo {
+	float: left;
+}
+
+.search {
+	float: left;
+	margin-left: 56px;
+}
+
+.search__text {
+	width: 255px;
+	border: $greyB;
+	border-right: 0;
+	border-radius: 5px 0 0 5px;
+	font-family: $light;
+	color: $lightGrey;
+	padding: 7px 16px;
+	outline: none;
+}
+
+.search__button {
+	font-family: $sami;
+	font-size: 16px;
+	color: #fff;
+	background: $orange;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	padding: 6px 15px 7px 15px;
+	margin-left: -5px;
+	outline: none;
+}
+
+.top-menu {
+	float: right;
+}
+
+.top-menu__item {
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 36px;
+	
+	&:first-child {
+		margin-left: 0;
+	}
+
+}
+
+.top-menu__link {
+	font-family: $sami;
+	font-size: 16px;
+
+	&:hover {
+		color: $orange;
 	}
 }

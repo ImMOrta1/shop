@@ -1,6 +1,7 @@
+include _mixins
 header.header
 	.header-top
-		.container
+		.container.clearfix
 			.top-socials
 				ul.top-socials__list
 					- var socials = ['fb', 'vk', 'tw']
@@ -9,10 +10,15 @@ header.header
 							a(href="#" class="top-socials__link top-socials__link_" + social)= social
 			adress.contacts
 				ul.contacts__list
-					li.contacts__item ул. Маяковская 6, офис 17
-					li.contacts__item +7 (921) 123-12-13
+					li.contacts__item.contacts__item_adress ул. Маяковская 6, офис 17
+					li.contacts__item.contacts__item_phone +7 (921) 123-12-13
 
 	.header-bottom
-		.container
+		.container.clearfix
 			.logo
+				a(href="#")
+					img(src="img/logo.png" alt="тестовый магазин Дмитрия Межуева")
 			form.search
+				input(type="text"  class="search__text" placeholder="Что будем искать")
+				button(type="submit" class="search__button") Найти
+			+nav('top-menu', ['Карта проезда', 'История заказов', 'Корзина'])

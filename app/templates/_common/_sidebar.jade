@@ -1,1 +1,7 @@
 aside.sidebar
+	.topbar
+		ul.topbar__list
+			- var topbar = ['Флагманы', 'Бюджетная линейка']
+			each bar in topbar
+				li.topbar__item
+					a(href="#" class="topbar__link")= bar

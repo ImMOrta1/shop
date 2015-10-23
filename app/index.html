@@ -6,15 +6,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" href="/bower/modernizr/modernizr.js">
+		<link rel="stylesheet" type="text/css" href="/bower/normalize-css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-		<title>block </title>
+		<title>Мобильные телефоны</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<!-- header-->
 			<header class="header">
 				<div class="header-top">
-					<div class="container">
+					<div class="container clearfix">
 						<div class="top-socials">
 							<ul class="top-socials__list">
 								<li class="top-socials__item"><a href="#" class="top-socials__link top-socials__link_fb">fb</a></li>
@@ -24,52 +26,104 @@
 						</div>
 						<adress class="contacts">
 							<ul class="contacts__list">
-								<li class="contacts__item">ул. Маяковская 6, офис 17</li>
-								<li class="contacts__item">+7 (921) 123-12-13</li>
+								<li class="contacts__item contacts__item_adress">ул. Маяковская 6, офис 17</li>
+								<li class="contacts__item contacts__item_phone">+7 (921) 123-12-13</li>
 							</ul>
 						</adress>
 					</div>
 				</div>
 				<div class="header-bottom">
-					<div class="container">
-						<div class="logo"></div>
-						<form class="search"></form>
-						<nav class="top-menu">
-							<ul class="top-menu__list">
-								<li class="top-menu__item"><a href="#" class="top-menu__link">Карта проезда</a></li>
-								<li class="top-menu__item"><a href="#" class="top-menu__link">История заказов</a></li>
-								<li class="top-menu__item"><a href="#" class="top-menu__link">Корзина</a></li>
-							</ul>
-						</nav>
+					<div class="container clearfix">
+						<div class="logo"><a href="#"><img src="img/logo.png" alt="тестовый магазин Дмитрия Межуева"></a></div>
+						<form class="search">
+							<input type="text" placeholder="Что будем искать" class="search__text">
+							<button type="submit" class="search__button">Найти</button>
+						</form>
+									<nav class="top-menu">
+										<ul class="top-menu__list">
+											<li class="top-menu__item"><a href="#" class="top-menu__link">Карта проезда</a></li>
+											<li class="top-menu__item"><a href="#" class="top-menu__link">История заказов</a></li>
+											<li class="top-menu__item"><a href="#" class="top-menu__link">Корзина</a></li>
+										</ul>
+									</nav>
 					</div>
 				</div>
 			</header>
 			<!-- main-menu-->
-			<nav class="main-menu">
+			<div class="main-menu__container">
 				<div class="container">
-					<ul class="main-menu__list">
-						<li class="main-menu__item"><a href="#">Планшеты</a></li>
-						<li class="main-menu__item"><a href="#">Мобильные телефоны</a></li>
-						<li class="main-menu__item"><a href="#">Мр3 плееры</a></li>
-						<li class="main-menu__item"><a href="#">Персональные компьютеры</a></li>
-						<li class="main-menu__item"><a href="#">Ноутбуки</a></li>
-						<li class="main-menu__item"><a href="#">Аксессуары</a></li>
-						<li class="main-menu__item"><a href="#">Бытовая техника</a></li>
-					</ul>
+								<nav class="main-menu">
+									<ul class="main-menu__list">
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Планшеты</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link main-menu__link_active">Мобильные телефоны</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Мр3 плееры</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Персональные компьютеры</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Ноутбуки</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Аксессуары</a></li>
+										<li class="main-menu__item"><a href="#" class="main-menu__link">Бытовая техника</a></li>
+									</ul>
+								</nav>
 				</div>
-			</nav>
+			</div>
 			<!-- site-path-->
-			<div class="site-path"></div>
+			<div class="container">
+				<div class="page-path">
+					<div class="page-links">
+						<ul class="page-links__list">
+							<li class="page-links__item">Главная > </li>
+							<li class="page-links__item"><a href="#" class="page-links__link">Каталог</a></li>
+						</ul>
+					</div>
+					<h1 class="page-title">Мобильные телефоны</h1>
+				</div>
+			</div>
 			<div class="main-content">
-				<div class="top-content">
-					<!-- side-bar-->
-					<aside class="sidebar"></aside>
+				<div class="container">
+					<!-- sidebar-->
+					<aside class="sidebar">
+						<div class="topbar">
+							<ul class="topbar__list">
+								<li class="topbar__item"><a href="#" class="topbar__link">Флагманы</a></li>
+								<li class="topbar__item"><a href="#" class="topbar__link">Бюджетная линейка</a></li>
+							</ul>
+						</div>
+					</aside>
 					<!-- content-->
 				</div>
-				<!-- bottom-content-->
+				<div class="container">
+					<!-- bottom-content-->
+				</div>
 			</div>
-			<!--footer-->
 		</div>
+		<!--footer-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content clearfix">
+					<div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt="логотипа сверху явно не хватило дизайнеру" class="footer-logo__img"></a></div>
+					<div class="footer-socials">
+						<ul class="footer-socials__list">
+							<li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_fb">fb</a></li>
+							<li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_vk">vk</a></li>
+							<li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_tw">tw</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-links">
+							<nav class="footer-menu">
+								<ul class="footer-menu__list">
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Планшеты</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Мобильные телефоны</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Мр3 плееры</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Персональные компьютеры</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Ноутбуки</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Аксессуары</a></li>
+									<li class="footer-menu__item"><a href="#" class="footer-menu__link">Бытовая техника</a></li>
+								</ul>
+							</nav>
+				</div>
+			</div>
+			<div class="copyright">All rights reserved. 2015. no copy alowed</div>
+		</footer>
 		<script /js/main.js></script>
 	</body>
 </html>

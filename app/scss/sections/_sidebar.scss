@@ -1,0 +1,30 @@
+/* --------- sidebar --------- */
+.sidebar {
+	float: left;
+	width: 333px;
+}
+
+.topbar {
+	background: $bgGrey;
+	border-radius: 5px;
+	border: $greyB;
+}
+
+.topbar__item {
+	border-bottom: $greyB;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.topbar__link {
+	display: block;
+	text-decoration: none;
+	padding: 12px 29px;
+	color: $lightGrey;
+
+	&:hover {
+		background: $lightBlue;
+	}
+}

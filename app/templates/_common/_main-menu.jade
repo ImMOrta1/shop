@@ -1,17 +1,4 @@
-nav.main-menu
+include _mixins
+.main-menu__container
 	.container
-		ul.main-menu__list
-			li.main-menu__item
-				a(href="#") Планшеты
-			li.main-menu__item
-				a(href="#") Мобильные телефоны
-			li.main-menu__item
-				a(href="#") Мр3 плееры
-			li.main-menu__item
-				a(href="#") Персональные компьютеры
-			li.main-menu__item
-				a(href="#") Ноутбуки
-			li.main-menu__item
-				a(href="#") Аксессуары
-			li.main-menu__item
-				a(href="#") Бытовая техника
+		+nav('main-menu', ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'], 1)

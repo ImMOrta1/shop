@@ -5,6 +5,10 @@
 
 /* --------- sections --------- */
 @import "sections/_header";
+@import "sections/_main-menu";
+@import "sections/_page-path";
+@import "sections/_sidebar";
+@import "sections/_footer";
 
 /* --------- fonts --------- */
 @import "_misc/_fonts.scss"

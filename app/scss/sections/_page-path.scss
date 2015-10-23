@@ -1,0 +1,24 @@
+.page-path {
+	margin-bottom: 30px;
+}
+
+.page-links {
+	margin-bottom: 20px;
+}
+
+.page-links__item {
+	display: inline;
+}
+
+.page-links__link {
+	color: $orange;
+
+	&:hover {
+		color: #ccc;
+	}
+}
+
+.page-title {
+	font-family: $bold;
+	font-size: 20px;
+}

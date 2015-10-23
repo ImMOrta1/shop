@@ -1,0 +1,41 @@
+.main-menu__container {
+	background-color: #fff;
+	height: 52px;
+	border-bottom: $greyBb;
+	margin-bottom: 26px;
+}
+
+.main-menu {
+	padding:0 10px;
+}
+
+.main-menu__list {
+	font-size: 0;
+}
+
+.main-menu__item {
+	display: inline-block;
+}
+
+.main-menu__link {
+	display: block;
+	padding: 15px 14px;
+	font-size: 16px;
+	text-decoration: none;
+
+	&:hover {
+		background: #e4e2e2;
+	}
+
+	&_active {
+		font-family: $sami;
+		color: #fff;
+		background: $orange;
+
+		&:hover {
+			font-family: $sami;
+			color: #fff;
+			background: $orange;
+		}
+	}
+}
