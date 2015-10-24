@@ -28,6 +28,7 @@
 	height: 26px;		
 }
 
+@import "icons/*.png";
 
 $socials: fb, vk, tw;
 @each $social in $socials {
