@@ -1,0 +1,15 @@
+.filter.clearfix
+    .filter-select
+        .filter-select__title Сортировать по
+        select.filter-select__val
+            option.filter-select__option(value="price") по цене
+            option.filter-select__option(value="rating") по рейтингу
+            option.filter-select__option(value="review") по отзывам
+
+    .view-select
+        .view-select__title Вид каталога
+        ul.view-select__list
+            - var views = ['view-lg', 'view-md', 'view-sm']
+            each view in views
+                li.view-select__item
+                    a(href="#" class="view-select__link view-select__link_" + view)

@@ -1,0 +1,14 @@
+.products {
+	background: $bgGrey;
+	border: $greyB;
+	border-radius: 5px;
+}
+
+.products__item {
+	padding: 20px;
+}
+
+.product-info__title {
+	font-family: $sami;
+	font-size: 16px;
+}

@@ -12,7 +12,7 @@
 		<title>Мобильные телефоны</title>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper clearfix">
 			<!-- header-->
 			<header class="header">
 				<div class="header-top">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div class="main-content">
-				<div class="container">
+				<div class="container clearfix">
 					<!-- sidebar-->
 					<aside class="sidebar">
 						<div class="topbar">
@@ -87,11 +87,154 @@
 								<li class="topbar__item"><a href="#" class="topbar__link">Бюджетная линейка</a></li>
 							</ul>
 						</div>
+						<div class="accordion">
+							<ul class="accordion__list">
+								<!-- Наличие в магазинах-->
+								<li class="accordion__item"><a href="#" class="accordion__link">Наличие в магазинах</a>
+									<ul class="accordion__inner-list">
+										<li class="accordion__inner-item">
+											<input type="radio" class="radio">
+											<div class="fake-radio"></div><span class="check-text">Во всех магазинах</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="radio" class="radio">
+											<div class="fake-radio"></div><span class="check-text">В ближайшем ко мне магазине</span>
+										</li>
+									</ul>
+								</li>
+								<!-- Бренды-->
+								<li class="accordion__item"><a href="#" class="accordion__link">Бренды</a>
+									<ul class="accordion__inner-list">
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Lenovo</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Apple</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Samsung</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Asus</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Motorola</span>
+										</li>
+									</ul><a href="#" class="accordion__reset">Сбросить фильтр</a>
+								</li>
+								<!-- Цена-->
+								<li class="accordion__item"><a href="#" class="accordion__link">Цена</a>
+									<div class="price">
+										<div class="price-val clearfix">
+											<div class="price-val__start"><span class="price-val__text">от</span>
+												<input type="text" placeholder="0" class="price-val__input">
+											</div>
+											<div class="price-val__over"><span class="price-val__text">до</span>
+												<input type="text" placeholder="100000" class="price-val__input">
+											</div>
+										</div>
+										<div class="price-slider clearfix">
+											<div class="price-slider__linebar"></div>
+											<div class="price-slider__linebar-hover"></div>
+											<div class="price-slider__start"></div>
+											<div class="price-slider__over"></div>
+										</div>
+									</div>
+								</li>
+								<!--Цвет-->
+								<li class="accordion__item"><a href="#" class="accordion__link">Цвет</a>
+									<ul class="colors__list">
+										<li class="colors__item"><a href="#" style="background-color: #fff" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #ccc" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #000" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #0a3153" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #ff1800" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #fff343" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #fb914a" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #92c37c" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #40a6ff" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #9870ad" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #dc78ad" class="colors__link"></a></li>
+										<li class="colors__item"><a href="#" style="background-color: #7f401d" class="colors__link"></a></li>
+									</ul>
+								</li>
+								<!-- Операционные системы-->
+								<li class="accordion__item"><a href="#" class="accordion__link">Операционные системы</a>
+									<ul class="accordion__inner-list">
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Android</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">iOS</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Windows Mobile</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Symbian</span>
+										</li>
+										<li class="accordion__inner-item">
+											<input type="checkbox" class="checkbox">
+											<div class="fake-checkbox"></div><span class="check-text">Custom</span>
+										</li>
+									</ul><a href="#" class="accordion__reset">Сбросить фильтр</a>
+								</li>
+							</ul>
+						</div>
 					</aside>
 					<!-- content-->
+					<div class="content">
+						<div class="filter clearfix">
+							<div class="filter-select">
+								<div class="filter-select__title">Сортировать по</div>
+								<select class="filter-select__val">
+									<option value="price" class="filter-select__option">по цене</option>
+									<option value="rating" class="filter-select__option">по рейтингу</option>
+									<option value="review" class="filter-select__option">по отзывам</option>
+								</select>
+							</div>
+							<div class="view-select">
+								<div class="view-select__title">Вид каталога</div>
+								<ul class="view-select__list">
+									<li class="view-select__item"><a href="#" class="view-select__link view-select__link_view-lg"></a></li>
+									<li class="view-select__item"><a href="#" class="view-select__link view-select__link_view-md"></a></li>
+									<li class="view-select__item"><a href="#" class="view-select__link view-select__link_view-sm"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="products">
+							<ul class="products__list">
+								<li class="products__item">
+									<div class="product-images"></div>
+									<div class="product-info">
+										<h2 class="product-info__title">Samsung GT-I9301I GALAXY S 3</h2>
+										<p class="product-info__text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</p>
+									</div>
+									<div class="product-price"></div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="container">
+				<div class="container clearfix">
 					<!-- bottom-content-->
+					<h2 class="page-title">Важная информация
+						<p class="content-text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p class="content-text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p class="content-text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+						<p class="content-text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p class="content-text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p class="content-text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся </p>
+					</h2>
 				</div>
 			</div>
 		</div>

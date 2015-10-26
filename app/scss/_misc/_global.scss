@@ -7,9 +7,11 @@ $lightBlue: #dde7ec;
 $greyBb: 2px solid #ebedef;
 $greyB: 1px solid #dee1e4;
 
+$reg: "OpenSansRegular";
 $light: "OpenSansLight";
 $sami: "OpenSansSemiBold";
 $bold: "OpenSansBold";
+$accPad: 0 20px 0 29px;
 
 //основная разметка
 body {
@@ -39,8 +41,8 @@ a {
 
 .wrapper {
 	min-width: 1200px;
-	height: 100%;
-	padding-bottom: 220px;
+	min-height: 100%;
+	margin-bottom: 220px;
 	box-sizing: border-box;
 }
 
@@ -51,13 +53,25 @@ a {
 
 
 .clearfix {
-	&:before {
-		content: " ";
- 		display: table;
-	}
+    &:before,
 	&:after {
-		content: " ";
- 		display: table;
- 		clear: both;
+		content: "";
+		display: table;
 	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+// текст 
+.page-title {
+	font-family: $bold;
+	font-size: 20px;
+}
+
+.content-text {
+	font-family: $reg;
+	font-size: 14px;
+	color: #333;
 }

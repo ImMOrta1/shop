@@ -14,7 +14,7 @@ html(lang="ru-RU")
 		title
 			block title
 	body
-		.wrapper
+		.wrapper.clearfix
 			// header
 			include _common/_header
 			// main-menu
@@ -26,12 +26,14 @@ html(lang="ru-RU")
 						block page-links
 					block page-title
 			.main-content
-				.container
+				.container.clearfix
 					// sidebar
 					include _common/_sidebar
 					// content
-					include _common/_content
-				.container
+					.content
+						include _common/_filter
+						block products
+				.container.clearfix
 					// bottom-content
 					include _common/_bottom-content
 		//footer

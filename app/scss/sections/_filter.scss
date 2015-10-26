@@ -1,0 +1,76 @@
+.content {
+	float: right;
+	width: 743px;
+}
+
+.filter {
+	background: $lightBlue;
+	border-radius: 5px;
+	border: $greyB;
+	margin-bottom: 20px;
+}
+
+.filter-select {
+    float: left;
+}
+
+.filter-select__title {
+	display: inline-block;
+	padding: 0 5px 0 22px;
+}
+
+.filter-select__val {
+    width: 144px;
+    border: $greyB;
+    border-radius: 5px;
+	display: inline-block;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 10px 5px 10px;
+    margin-top: 10px;
+}
+
+.view-select {
+	float: right;
+}
+.view-select__title {
+	vertical-align: top;
+	display: inline-block;
+	line-height: 14px;
+	padding: 16px 15px 0 0;
+}
+
+.view-select__list {
+	font-size: 0;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.view-select__item {
+    display: inline-block;
+    border-left: $greyB;
+    padding: 17px;
+
+    &:first-child {
+    	margin-left: 0;
+    }
+}
+
+$views: view-lg, view-md, view-sm;
+$view-map: sprite-map('view/*.png', $spacing: 70px);
+@each $view in $views {
+	.view-select__link_#{$view} {
+    	@include get-sprite($view-map, $view);
+    	display: block;
+    	width: 16px;
+		height: 16px;
+
+		&:hover {
+			$view-hover: $view + '-hover';
+			@include get-sprite($view-map, $view-hover);
+		}
+	}
+}
+

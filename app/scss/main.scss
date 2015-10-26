@@ -2,12 +2,15 @@
 
 /* --------- global styles --------- */
 @import "_misc/_global";
+@import "_misc/_mixins";
 
 /* --------- sections --------- */
 @import "sections/_header";
 @import "sections/_main-menu";
 @import "sections/_page-path";
 @import "sections/_sidebar";
+@import "sections/_products";
+@import "sections/_filter";
 @import "sections/_footer";
 
 /* --------- fonts --------- */

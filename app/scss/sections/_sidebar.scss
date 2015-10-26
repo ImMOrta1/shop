@@ -8,6 +8,7 @@
 	background: $bgGrey;
 	border-radius: 5px;
 	border: $greyB;
+	margin-bottom: 39px;
 }
 
 .topbar__item {
@@ -26,5 +27,177 @@
 
 	&:hover {
 		background: $lightBlue;
+	}
+}
+
+/* --------- sidebar-filter--------- */
+.accordion {
+	@extend .topbar;
+}
+
+.accordion__item {
+	border-bottom: $greyB;
+	padding-top: 12px;
+	margin-bottom: 3px;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.accordion__link {
+	display: block;
+	font-family: $sami;
+	font-size: 16px;
+	text-decoration: none;
+	padding: $accPad;
+	margin-bottom: 15px;
+}
+
+.accordion__inner-item {
+	padding: $accPad;
+	position: relative;
+	margin-bottom: 17px;
+}
+
+.accordion__reset {
+	display: block;
+	width: 120px;
+	padding: $accPad;
+	color: #5db2fc;
+	margin-bottom: 18px;
+
+	&:hover {
+		color: #ccc;
+	}
+}
+
+.radio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.check-text {
+	padding-left: 30px;
+}
+
+$radios: radio;
+$radio-map: sprite-map('radio/*.png', $spacing: 70px);
+@each $radio in $radios {
+	.fake-radio {
+		@include get-sprite($radio-map, $radio);
+		display: block;
+		position: absolute;
+	}
+}
+
+.checkbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+$checkboxes: checkbox;
+$checkboxes-map: sprite-map('checkbox/*.png', $spacing: 70px);
+@each $checkbox in $checkboxes {
+	.fake-checkbox {
+		@include get-sprite($checkboxes-map, $checkbox);
+		display: block;
+		position: absolute;
+	}
+
+	.checkbox:checked + .fake-checkbox {
+		$checkbox-check: $checkbox + '-check';
+		@include get-sprite($checkboxes-map, $checkbox-check);
+	}
+}
+
+
+/* --------- sidebar-price--------- */
+.price {
+	padding: 0 29px;
+	margin-bottom: 17px;
+}
+
+.price-val__start {
+	float: left;
+}
+
+.price-val__over {
+	float: right;
+	margin-bottom: 20px;
+}
+
+.price-val__text {
+	padding-right: 10px;
+}
+
+.price-val__input {
+	width: 60px;
+	border: $greyB;
+	border-radius: 5px;
+	color: $lightGrey;
+	padding: 3px 10px;
+	outline: none;
+}
+
+.price-slider {
+    height: 15px;
+    position: relative;
+}
+
+.price-slider__linebar {
+    height: 3px;
+    background: #dee1e4;
+}
+
+.price-slider__linebar-hover{
+    height: 3px;
+    background: #ff6600;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.price-slider__start {
+	position: absolute;
+    top: 2px;
+    left: -3px;
+}
+
+.price-slider__start {
+	position: absolute;
+    top: 2px;
+    right: -3px;
+}
+
+
+/* --------- sidebar-colors--------- */
+
+.colors__list {
+	padding: 0 29px;
+	margin-left: -22px;
+	margin-top: -22px;
+	margin-bottom: 17px;
+}
+
+.colors__item {
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 18px;
+}
+
+.colors__link {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: $greyB;
+
+	&:hover {
+		box-shadow: 0 0 3px $orange;
 	}
 }

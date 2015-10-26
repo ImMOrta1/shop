@@ -40,13 +40,16 @@
 }
 
 
-$socials: fb, vk, tw;
-@each $social in $socials {
-	.footer-socials__link_#{$social} {
-		background: url('../img/footer-socials/#{$social}-footer.png') 0 0 no-repeat;
-	}
-	.footer-socials__link_#{$social}:hover {
-		background: url('../img/footer-socials/#{$social}-footer-hover.png') 0 0 no-repeat;
+$footer-socials: fb, vk, tw;
+$footer-map: sprite-map('footer-socials/*.png', $spacing: 70px);
+@each $footer in $footer-socials {
+	.footer-socials__link_#{$footer} {
+		@include get-sprite($footer-map, $footer);
+
+		&:hover {
+			$footer-hover: $footer + '-hover';
+			@include get-sprite($footer-map, $footer-hover);
+		}
 	}
 }
 

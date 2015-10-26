@@ -28,15 +28,16 @@
 	height: 26px;		
 }
 
-@import "icons/*.png";
-
 $socials: fb, vk, tw;
+$socials-map: sprite-map('top-socials/*.png', $spacing: 70px);
 @each $social in $socials {
 	.top-socials__link_#{$social} {
-		background: url('../img/top-socials/#{$social}.png') 0 0 no-repeat;
-	}
-	.top-socials__link_#{$social}:hover {
-		background: url('../img/top-socials/#{$social}-hover.png') 0 0 no-repeat;
+		@include get-sprite($socials-map, $social);
+
+		&:hover {
+			$social-hover: $social + '-hover';
+			@include get-sprite($socials-map, $social-hover);
+		}
 	}
 }
 
@@ -71,6 +72,8 @@ $contacts: adress, phone;
 		background: url('../img/contacts/#{$contact}.png') 0 0 no-repeat;
 	}
 }
+
+
 
 /* --------- bottom-header --------- */
 .header-bottom {
