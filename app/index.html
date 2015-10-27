@@ -31,7 +31,7 @@
 		<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 		<!-- includes-->
-		<link rel="stylesheet" type="text/css" href="/bower/modernizr/modernizr.js">
+		<script src="bower/modernizr/modernizr.js"></script>
 		<link rel="stylesheet" type="text/css" href="/bower/normalize-css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<title>Мобильные телефоны</title>
@@ -164,10 +164,10 @@
 										<div class="price">
 											<div class="price-val clearfix">
 												<div class="price-val__start"><span class="price-val__text">от</span>
-													<input type="text" placeholder="0" class="price-val__input">
+													<input type="text" value="0" class="price-val__input">
 												</div>
 												<div class="price-val__over"><span class="price-val__text">до</span>
-													<input type="text" placeholder="100000" class="price-val__input">
+													<input type="text" value="50000" class="price-val__input">
 												</div>
 											</div>
 											<div class="price-slider clearfix">
@@ -527,6 +527,7 @@
 			<div class="copyright">All rights reserved. 2015. no copy alowed</div>
 		</footer>
 		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="js/jquery-ui/jquery-ui.js"></script>
 		<script src="js/jquery.columnizer.js"></script>
 		<script src="js/main.js"></script>
 	</body>
