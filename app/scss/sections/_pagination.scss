@@ -1,0 +1,54 @@
+.pagination {
+	float: right;
+}
+
+.pagination__list {
+}
+
+.pagination__item {
+	display: inline-block;
+	border: $greyB;
+	border-radius: 5px;
+	font-family: $bold;
+	overflow: hidden;
+
+	&:first-child {
+		background: #fbfbfb;
+	}
+
+	&:last-child {
+		background: #fbfbfb;
+	}
+}
+
+.pagination__link {
+	text-decoration: none;
+	display: block;
+	padding: 4px 9px 4px;
+	background: #fbfbfb;
+	font-size: 12px;
+	color: $lightGrey;
+
+	&:hover {
+		box-shadow: 0 0 3px #eee;
+	}
+
+	&_active {
+		background: #e0e0e0;
+		box-shadow: 0 0 3px #eee;
+	}
+
+	&_prev {
+		padding: 0;
+		width: 26px;
+		height: 25px;
+		@include get-sprite($map, pag-arrow-prev);
+	}
+
+	&_next {
+		padding: 0;
+		width: 26px;
+		height: 25px;
+		@include get-sprite($map, pag-arrow-next);
+	}
+}

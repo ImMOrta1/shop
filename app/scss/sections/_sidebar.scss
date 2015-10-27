@@ -36,22 +36,46 @@
 }
 
 .accordion__item {
+	position: relative;
 	border-bottom: $greyB;
-	padding-top: 12px;
-	margin-bottom: 3px;
 
 	&:last-child {
 		border-bottom: none;
 	}
 }
 
+.accordion__item-container {
+	padding-top: 5px;
+}
+
+
 .accordion__link {
 	display: block;
 	font-family: $sami;
 	font-size: 16px;
 	text-decoration: none;
-	padding: $accPad;
-	margin-bottom: 15px;
+	padding: 12px 20px 12px 29px;
+
+	&:hover {
+		background: $lightBlue;
+	}
+}
+
+.accordion__arrow {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	display: block;
+	width: 18px;
+	height: 11px;
+
+	&_up {
+		@include get-sprite($map, acc-arrow-up);
+	}
+
+	&_down {
+		@include get-sprite($map, acc-arrow-down);
+	}
 }
 
 .accordion__inner-item {
@@ -74,9 +98,11 @@
 
 .radio {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 2px;
+	left: 32px;
+	z-index: 99;
 	opacity: 0;
+	cursor: pointer;
 }
 
 .check-text {
@@ -91,13 +117,15 @@ $radio-map: sprite-map('radio/*.png', $spacing: 70px);
 		display: block;
 		position: absolute;
 	}
+
+	.radio:checked + .fake-radio {
+		$radio-check: $radio + '-check';
+		@include get-sprite($radio-map, $radio-check);
+	}
 }
 
 .checkbox {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
+	@extend .radio;
 }
 
 $checkboxes: checkbox;
@@ -167,12 +195,14 @@ $checkboxes-map: sprite-map('checkbox/*.png', $spacing: 70px);
 	position: absolute;
     top: 2px;
     left: -3px;
+    @include get-sprite($map, arrow);
 }
 
-.price-slider__start {
+.price-slider__over {
 	position: absolute;
     top: 2px;
     right: -3px;
+    @include get-sprite($map, arrow);
 }
 
 

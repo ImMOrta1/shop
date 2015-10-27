@@ -10,60 +10,70 @@ aside.sidebar
 				// Наличие в магазинах
 				li.accordion__item
 					a.accordion__link(href="#") Наличие в магазинах
-					ul.accordion__inner-list
-						- var nalichie = ['Во всех магазинах', 'В ближайшем ко мне магазине']
-						each nal in nalichie
-							li.accordion__inner-item
-								input.radio(type="radio")
-								.fake-radio
-								span.check-text= nal
+					.accordion__item-container
+						ul.accordion__inner-list
+							- var nalichie = ['Во всех магазинах', 'В ближайшем ко мне магазине']
+							each nal in nalichie
+								li.accordion__inner-item
+									input.radio(type="radio" name="radio")
+									.fake-radio
+									span.check-text= nal
+					.accordion__arrow.accordion__arrow_up
 
 				// Бренды
 				li.accordion__item
 					a.accordion__link(href="#") Бренды
-					ul.accordion__inner-list
-						- var nalichie = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
-						each nal in nalichie
-							li.accordion__inner-item
-								input.checkbox(type="checkbox")
-								.fake-checkbox
-								span.check-text= nal
-					a.accordion__reset(href="#") Сбросить фильтр
+					.accordion__item-container
+						ul.accordion__inner-list
+							- var nalichie = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
+							each nal in nalichie
+								li.accordion__inner-item
+									input.checkbox(type="checkbox")
+									.fake-checkbox
+									span.check-text= nal
+							a.accordion__reset(href="#") Сбросить фильтр
+					.accordion__arrow.accordion__arrow_up
 
 				// Цена
 				li.accordion__item
 					a.accordion__link(href="#") Цена
-					.price
-						.price-val.clearfix
-							.price-val__start
-								span.price-val__text от
-								input.price-val__input(type="text", placeholder="0")
-							.price-val__over
-								span.price-val__text до
-								input.price-val__input(type="text", placeholder="100000")
-						.price-slider.clearfix
-							.price-slider__linebar
-							.price-slider__linebar-hover
-							.price-slider__start
-							.price-slider__over
+					.accordion__item-container
+						.price
+							.price-val.clearfix
+								.price-val__start
+									span.price-val__text от
+									input.price-val__input(type="text", placeholder="0")
+								.price-val__over
+									span.price-val__text до
+									input.price-val__input(type="text", placeholder="100000")
+							.price-slider.clearfix
+								.price-slider__linebar
+								.price-slider__linebar-hover
+								.price-slider__start
+								.price-slider__over
+					.accordion__arrow.accordion__arrow_up
 
 				//Цвет
 				li.accordion__item
 					a.accordion__link(href="#") Цвет
-					ul.colors__list
-						- var colors = ['#fff', '#ccc', '#000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
-						each color in colors
-							li.colors__item
-								a.colors__link(href="#" style="background-color: " + color)
+					.accordion__item-container
+						ul.colors__list
+							- var colors = ['#fff', '#ccc', '#000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
+							each color in colors
+								li.colors__item
+									a.colors__link(href="#" style="background-color: " + color)
+					.accordion__arrow.accordion__arrow_up
 
 				// Операционные системы
 				li.accordion__item
 					a.accordion__link(href="#") Операционные системы
-					ul.accordion__inner-list
-						- var nalichie = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
-						each nal in nalichie
-							li.accordion__inner-item
-								input.checkbox(type="checkbox")
-								.fake-checkbox
-								span.check-text= nal
-					a.accordion__reset(href="#") Сбросить фильтр
+					.accordion__item-container
+						ul.accordion__inner-list
+							- var nalichie = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
+							each nal in nalichie
+								li.accordion__inner-item
+									input.checkbox(type="checkbox")
+									.fake-checkbox
+									span.check-text= nal
+							a.accordion__reset(href="#") Сбросить фильтр
+					.accordion__arrow.accordion__arrow_up

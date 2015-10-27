@@ -1,3 +1,5 @@
+$map: sprite-map('other-icons/*.png', $spacing: 70px);
+
 @mixin get-sprite ($map, $icon) {
   $sprite-image: sprite-file($map, $icon);
   $sprite-map: sprite-url($map);
