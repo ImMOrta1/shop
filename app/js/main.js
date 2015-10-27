@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// accordoen
 	$('.accordion__link').on('click', function(event) {
 		event.preventDefault();
 
@@ -12,14 +13,24 @@ $(document).ready(function() {
 
 	});
 
+	// reset
 	$('.accordion__reset').on('click', function(event) {
 		event.preventDefault();
 
 		var $this = $(this),
-			item = $this.closest('.accordion__inner-item');
+			item = $this.closest('.accordion__item-container');
 			
-			item.find('.checkbox').removeProp('checked');
+			item.find('input').removeProp('checked');
 
 	});
+	// colunnizer
+
+
+	var columnizer = function() {
+
+		$('.information').columnize({
+			width: 530
+		});
+	};
 
 });
