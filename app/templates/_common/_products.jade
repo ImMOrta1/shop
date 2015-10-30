@@ -1,0 +1,46 @@
+.products
+	ul.products__list
+		- for (var i = 0; i < 9; i++)
+			li.products__item
+				.product__item-container
+					.products__left
+						.products__images
+							.products__images-container
+								a.products__images-lg(href='#')
+									img.products__images-large(src="img/products/samsung/samsung-big.jpg")
+								ul.products__images-list
+										li.products__images-item
+											a.img.products__images-sm(href="#")
+												img.products__images-small(src="img/products/samsung/samsung-big.jpg")
+										li.products__images-item
+											a.img.products__images-sm(href="#")
+												img.products__images-small(src="img/products/samsung/samsung-big.jpg")
+										li.products__images-item
+											a.img.products__images-sm(href="#")
+												img.products__images-small(src="img/products/samsung/samsung-big.jpg")
+							.products__article
+								.products__article-name Артикул
+								.products__article-val 189238
+
+						.products__info
+							.products__info-title Samsung GT-I9301I GALAXY S 3
+							ul.products__info-list
+								- var info = {"Тип SIM-карты": "Micro-SIM", "Количество SIM-карт": "1", "Цвет": "Белый", "OC": "Android", "Связь 3G": "Есть", "4G (LTE)": "Нет", "GPS-модуль": "Есть"}
+								each value, key in info
+									li.products__info-item= key
+									li.products__info-val= value
+							.products__rating
+								ul.products__rating-list
+									li.products__rating-item.li.products__rating-item-full
+									li.products__rating-item.li.products__rating-item-full
+									li.products__rating-item.li.products__rating-item-full
+									li.products__rating-item
+									li.products__rating-item
+								.products__rating-val 4
+
+					.products__right
+						.products__price
+							.products__price-icon
+						.products__button
+							a.products__button-link(href"#)
+							.products__available В наличие

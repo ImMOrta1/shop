@@ -39,29 +39,102 @@ $(document).ready(function() {
 	});
 
 	// price-slider
-	$(function() {
-		
-    	$('.price-slider__linebar-hover').slider({
-      		range: true,
-      		min: 0,
-      		max: 50000,
-      		values: [ 0, 50000 ],
-    		slide: function( event, ui ) {
-    			$('.price-val__start').find('.price-val__input')
-    			.val($('.price-slider__linebar-hover').slider( "values", 0 ));
+    $('.price-slider').slider({
+      	range: true,
+      	min: 0,
+      	max: 25000,
+      	values: [ 0,  25000],
+    	slide: function( event, ui ) {
+    		$('.price-val__start').find('.price-val__input-start')
+    		.val($('.price-slider').slider( "values", 0 ));
 
-    			$('.price-val__over').find('.price-val__input')
-    			.val($('.price-slider__linebar-hover').slider( "values", 1 ));	
-      		}
-    	});	
-  	});
+    		$('.price-val__over').find('.price-val__input-over')
+    		.val($('.price-slider').slider( "values", 1 ));	
+      	}
+    });	
+
+  	// select
+  	$('.filter-select__val').select2({
+		minimumResultsForSearch: Infinity
+	});
+
+	// slideshow
+	$('.products__images-sm').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this),
+			item = $this.closest('.products__images-item'),
+			slideshow = $this.closest('.products__images-container'),
+			largeImage = slideshow.find('.products__images-lg'),
+			imgPath = item.find('img').attr('src');
+
+		if (!item.hasClass('active')) {
+
+			item.addClass('active').siblings().removeClass('active');
+
+			largeImage.find('img').fadeOut(500, function() {
+				$(this).attr('src', imgPath).fadeIn(500);
+			});
+		}
+
+	});
+	
+
+	// view soft знаю что повторяться ПЛОХО, решил сделать сам
+	$('.view-select__link_view-lg').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this),
+			viewSelect = $this.closest('.view-select__list'),
+			viewLink = viewSelect.find('view-select__link_view-md'),
+			prodList = $('.products__list');
+
+		if (!viewLink.hasClass('active')) {
+
+			viewLink.addClass('active');
+	    	prodList.removeClass(' products__list_grid');
+	    	prodList.removeClass(' products__list_line');
+	    }
+
+	});
+
+
+	$('.view-select__link_view-md').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this),
+			viewSelect = $this.closest('.view-select__list'),
+			viewLink = viewSelect.find('view-select__link_view-md'),
+			prodList = $('.products__list');
+
+		if (!viewLink.hasClass('active')) {
+
+			viewLink.addClass('active');
+			prodList.removeClass(' products__list_line');
+	    	prodList.addClass(' products__list_grid');
+	    }
+
+	});
+
+	$('.view-select__link_view-sm').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this),
+			viewSelect = $this.closest('.view-select__list'),
+			viewLink = viewSelect.find('view-select__link_view-sm'),
+			prodList = $('.products__list');
+
+		if (!viewLink.hasClass('active')) {
+
+			viewLink.addClass('active');
+			prodList.removeClass(' products__list_grid')
+	    	prodList.addClass(' products__list_line');
+	    }
+
+	});
 
 	// columnizer
-	var columnizer = function() {
-
-		$('.information').columnize({
-			width: 530
-		});
-	};
-
+	$('.information').columnize({
+		width: 550
+	});
 });

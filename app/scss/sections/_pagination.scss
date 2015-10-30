@@ -7,13 +7,18 @@
 
 .pagination__item {
 	display: inline-block;
+	position: relative;
+	width: 24px;
+	height: 25px;
 	border: $greyB;
 	border-radius: 5px;
 	font-family: $bold;
 	overflow: hidden;
+	text-align: center;
+	line-height: 25px;
 
 	&:first-child {
-		background: #fbfbfb;
+		background: #fbfbfb;;
 	}
 
 	&:last-child {
@@ -23,32 +28,24 @@
 
 .pagination__link {
 	text-decoration: none;
-	display: block;
-	padding: 4px 9px 4px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background: #fbfbfb;
 	font-size: 12px;
 	color: $lightGrey;
 
 	&:hover {
-		box-shadow: 0 0 3px #eee;
+		background: #eee;
 	}
+}
 
-	&_active {
-		background: #e0e0e0;
-		box-shadow: 0 0 3px #eee;
-	}
+.pagination__link_prev {
+	@include get-sprite($map, pag-arrow-prev);
+}
 
-	&_prev {
-		padding: 0;
-		width: 26px;
-		height: 25px;
-		@include get-sprite($map, pag-arrow-prev);
-	}
-
-	&_next {
-		padding: 0;
-		width: 26px;
-		height: 25px;
-		@include get-sprite($map, pag-arrow-next);
-	}
+.pagination__link_next {
+	@include get-sprite($map, pag-arrow-next);
 }

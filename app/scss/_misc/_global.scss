@@ -39,6 +39,11 @@ a {
 	color: #333;
 }
 
+p {
+	font-weight: normal;
+	line-height: 20px;
+}
+
 .wrapper {
 	min-width: 1200px;
 	min-height: 100%;
@@ -70,8 +75,20 @@ a {
 	font-size: 20px;
 }
 
-.content-text {
+.information p {
 	font-family: $reg;
 	font-size: 14px;
 	color: #333;
+}
+
+.first {
+	float: left;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.last {
+	float: right;
+	padding-left: 20px;
+	box-sizing: border-box;
 }

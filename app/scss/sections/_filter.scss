@@ -12,26 +12,88 @@
 
 .filter-select {
     float: left;
+    padding-top: 10px;
+    padding-left: 22px;
 }
 
 .filter-select__title {
-	display: inline-block;
-	padding: 0 5px 0 22px;
+	margin-right: 5px;
 }
 
 .filter-select__val {
-    width: 144px;
-    border: $greyB;
-    border-radius: 5px;
-	display: inline-block;
-    background-image: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 0 10px 5px 10px;
-    margin-top: 10px;
+	width: 143px;
+	height: 30px;
+	border-radius: 5px;
 }
 
+/* ------ стилизация селекта  select2------- */
+.select2-container {
+	border: 0;
+	outline: none;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: $greyB;
+    outline: none;
+
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.select2-container .select2-choice {
+	border: $greyB;
+	font-family: $reg;
+	font-size: 14px;
+	color: $lightGrey;
+	background: #fff;
+	box-shadow: none;
+}
+
+.select2-dropdown-open .select2-choice {
+	border-radius: 5px;
+	background: #fff;
+}
+
+.select2-container .select2-choice .select2-arrow {
+	background: none;
+	border-left: 0;
+}
+
+.select2-container .select2-choice .select2-arrow b {
+	@include get-sprite($map, select-arrow-down);
+	position: absolute;
+	top: 8px;
+	right: 7px
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow b {
+	@include get-sprite($map, select-arrow-up);
+	position: absolute;
+	top: 8px;
+	right: 7px
+}
+
+.select2-drop-active {
+	color: $lightGrey;
+	border: $greyB;
+	margin-top: 2px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .10);
+}
+
+.select2-results {
+	margin: 0;
+	padding: 0;
+}
+
+.select2-results .select2-highlighted {
+	background: #fbfbfb;
+	color: #333;
+}
+
+/* ------ переключатель вида товаров ------- */
 .view-select {
 	float: right;
 }
