@@ -33,7 +33,7 @@ p {
 .wrapper {
   min-width: 1200px;
   min-height: 100%;
-  margin-bottom: 220px;
+  padding-bottom: 220px;
   box-sizing: border-box;
 }
 
@@ -167,6 +167,10 @@ p {
   background: url("../img/contacts/phone.png") 0 0 no-repeat;
 }
 
+.contacts__link {
+  text-decoration: none;
+}
+
 /* --------- bottom-header --------- */
 .header-bottom {
   margin-bottom: 27px;
@@ -237,6 +241,7 @@ p {
 }
 
 .main-menu__list {
+  min-width: 1200px;
   font-size: 0;
 }
 
@@ -724,6 +729,15 @@ p {
   margin-bottom: 15px;
 }
 
+.products__images-large {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .products__images-item {
   margin-left: 16px;
   display: inline-block;
@@ -862,6 +876,7 @@ p {
   font-size: 20px;
   line-height: 22px;
   position: relative;
+  height: 100%;
 }
 .products__price:after {
   content: " ";

@@ -10,15 +10,17 @@ header.header
 							a(href="#" class="top-socials__link top-socials__link_" + social)= social
 			adress.contacts
 				ul.contacts__list
-					li.contacts__item.contacts__item_adress ул. Маяковская 6, офис 17
-					li.contacts__item.contacts__item_phone +7 (921) 123-12-13
+					li.contacts__item.contacts__item_adress
+						a.contacts__link(href="https://maps.yandex.ru/2/saint-petersburg/?source=serp_navig&text=%D1%83%D0%BB.%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%206&sll=30.353965%2C59.933122&sspn=0.032315%2C0.008992") ул.Маяковская 6, офис 17
+					li.contacts__item.contacts__item_phone
+						a.contacts__link(href="tel:+79211231213") +7 (921) 123-12-13
 
 	.header-bottom
 		.container.clearfix
 			.logo
 				a(href="#")
 					img(src="img/logo.png" alt="тестовый магазин Дмитрия Межуева")
-			form.search
+			form.search(method="get")
 				input(type="text"  class="search__text" placeholder="Что будем искать")
 				button(type="submit" class="search__button") Найти
 			+nav('top-menu', ['Карта проезда', 'История заказов', 'Корзина'])

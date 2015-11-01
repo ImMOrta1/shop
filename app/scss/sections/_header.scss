@@ -73,7 +73,9 @@ $contacts: adress, phone;
 	}
 }
 
-
+.contacts__link {
+	text-decoration: none;
+}
 
 /* --------- bottom-header --------- */
 .header-bottom {
