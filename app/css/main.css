@@ -231,17 +231,17 @@ p {
 
 .main-menu__container {
   background-color: #fff;
-  height: 52px;
   border-bottom: 2px solid #ebedef;
   margin-bottom: 26px;
 }
 
 .main-menu {
+  max-width: 1200px;
   padding-left: 10px;
 }
 
 .main-menu__list {
-  min-width: 1200px;
+  max-width: 1200px;
   font-size: 0;
 }
 
